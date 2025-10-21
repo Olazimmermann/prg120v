@@ -1,3 +1,4 @@
+<?php
 -- Opprett database (hopp over hvis du allerede har en)
 CREATE DATABASE IF NOT EXISTS skole
   CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
@@ -34,3 +35,4 @@ INSERT INTO student (brukernavn, fornavn, etternavn, klassekode) VALUES
 ('gb',  'Geir',  'Bjarvin',     'IT1'),
 ('mrj', 'Marius','R. Johannessen','IT1'),
 ('tb',  'Tove',  'Bøe',         'IT2');
+?>
