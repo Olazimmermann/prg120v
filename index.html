@@ -1,84 +1,12 @@
-<!DOCTYPE html>
-<html lang="no">
-<head>
-  <meta charset="UTF-8" />
-  <title>Klasse – registrer og slett</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <style>
-    :root { --card:#fff; --bg:#f6f7fb; --line:#e5e7eb; --text:#111; --muted:#6b7280; }
-    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; background: var(--bg); color: var(--text); margin: 24px; }
-    h1 { margin: 0 0 16px; }
-    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; max-width: 980px; }
-    .card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 16px; }
-    label { display: block; font-size: 14px; margin: 10px 0 6px; }
-    input, select, button { width: 100%; padding: 10px; border: 1px solid var(--line); border-radius: 10px; font-size: 14px; }
-    button { background: #111; color: #fff; cursor: pointer; margin-top: 12px; }
-    button.secondary { background: #475569; }
-    table { width: 100%; border-collapse: collapse; margin-top: 10px; }
-    th, td { border-bottom: 1px solid var(--line); padding: 8px; text-align: left; }
-    .help { color: var(--muted); font-size: 13px; margin-top: 6px; }
-    @media (max-width: 800px) { .grid { grid-template-columns: 1fr; } }
-  </style>
-</head>
-<body>
-
-  <h1>Klasse – registrer og slett</h1>
-  <p class="help">Dette er kun HTML-skjema. Sett <code>action</code> til en PHP-side (f.eks. <code>index.php</code>) som håndterer lagring/sletting.</p>
-
-  <div class="grid">
-    <!-- Registrer ny klasse -->
-    <form class="card" method="post" action="index.php">
-      <h2>Registrer ny klasse</h2>
-
-      <label for="klassekode">Klassekode (5 tegn)</label>
-      <input id="klassekode" name="klassekode" maxlength="5" required />
-
-      <label for="klassenavn">Klassenavn</label>
-      <input id="klassenavn" name="klassenavn" maxlength="50" required />
-
-      <label for="studiumkode">Studiumkode</label>
-      <input id="studiumkode" name="studiumkode" maxlength="50" required />
-
-      <button type="submit" name="lagre_klasse">Lagre</button>
-      <p class="help">Når du trykker “Lagre”, sendes dataene til <code>index.php</code> (endre ved behov).</p>
+<!DOCKTYPE html> 
+<html>
+  <head>
+    <title>Klasse</title>
+  </head>
+  <body>
+    <h3>Klasse</h3>
+    <form  method="post"  >
+      
     </form>
-
-    <!-- Slett klasse -->
-    <form class="card" method="post" action="index.php" onsubmit="return confirm('Slette valgt klasse?');">
-      <h2>Slett klasse</h2>
-
-      <label for="slett_klassekode">Velg klasse</label>
-      <select id="slett_klassekode" name="klassekode" required>
-        <option value="">-- velg --</option>
-        <!-- Du kan erstatte disse med faktiske verdier, eller fylle dynamisk med PHP -->
-        <option value="IT1">IT1 — IT og ledelse 1. år</option>
-        <option value="IT2">IT2 — IT og ledelse 2. år</option>
-        <option value="IT3">IT3 — IT og ledelse 3. år</option>
-      </select>
-
-      <button type="submit" name="slett_klasse" class="secondary">Slett</button>
-      <p class="help">Denne listeboksen kan fylles automatisk fra databasen med PHP senere.</p>
-    </form>
-  </div>
-
-  <!-- (Valgfritt) Tabell for å vise eksisterende klasser – fylles av PHP senere -->
-  <div class="card" style="max-width:980px; margin-top:16px;">
-    <h2>Alle klasser (visning)</h2>
-    <table aria-label="Alle klasser">
-      <thead>
-        <tr><th>Klassekode</th><th>Klassenavn</th><th>Studiumkode</th></tr>
-      </thead>
-      <tbody>
-        <!-- Her kan PHP skrive ut rader fra databasen.
-             Eksempel (statisk):
-        <tr><td>IT1</td><td>IT og ledelse 1. år</td><td>ITLED</td></tr>
-        <tr><td>IT2</td><td>IT og ledelse 2. år</td><td>ITLED</td></tr>
-        <tr><td>IT3</td><td>IT og ledelse 3. år</td><td>ITLED</td></tr>
-        -->
-        <tr><td colspan="3"><span class="help">Fylles av PHP (SELECT * FROM klasse).</span></td></tr>
-      </tbody>
-    </table>
-  </div>
-
-</body>
+  </body>
 </html>
