@@ -1,11 +1,16 @@
-<?php
-// Enkel kode for å vise innholdet i tabellen "klasse"
+<h2>Registrer klasse</h2>
+<form method="post" action="index.php">
+  <label>Klassekode (5):<br>
+    <input type="text" name="klassekode" maxlength="5" required>
+  </label><br><br>
 
-// Koblingsinformasjon
-$tjener = getenv("DB_HOST") ?: "localhost";
-$bruker = getenv("DB_USER") ?: "root";
-$passord = getenv("DB_PASS") ?: "";
-$database = getenv("DB_NAME") ?: "skole";
+  <label>Klassenavn:<br>
+    <input type="text" name="klassenavn" maxlength="50" required>
+  </label><br><br>
 
-// Koble til databasen
-$kobling = new mysqli($tjener, $bruker, $passord, $database);
+  <label>Studiumkode:<br>
+    <input type="text" name="studiumkode" maxlength="50" required>
+  </label><br><br>
+
+  <button type="submit" name="lagre_klasse">Lagre</button>
+</form>
