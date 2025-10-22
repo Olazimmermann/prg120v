@@ -16,7 +16,7 @@
 </form>
 
 
-/* Registrer student*/
+
 <h2>Registrer student</h2>
 <form method="post" action="index.php">
   <label>Brukernavn (max 7):<br>
