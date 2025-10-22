@@ -42,3 +42,18 @@
 
   <button type="submit" name="lagre_student">Lagre</button>
 </form>
+
+
+<h2>Slett klasse</h2>
+<form method="post" action="index.php" onsubmit="return confirm('Slette valgt klasse?');">
+  <label>Velg klasse:<br>
+    <select name="klassekode" required>
+      <option value="">-- velg --</option>
+      <option value="IT1">IT1 — IT og ledelse 1. år</option>
+      <option value="IT2">IT2 — IT og ledelse 2. år</option>
+      <option value="IT3">IT3 — IT og ledelse 3. år</option>
+    </select>
+  </label><br><br>
+
+  <button type="submit" name="slett_klasse">Slett</button>
+</form>
