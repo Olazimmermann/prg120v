@@ -9,8 +9,19 @@ $database = getenv('DB_DATABASE');
 
  $db=mysqli_connect($host,$username,$password,$database) or die ("ikke kontakt med database-server");
     /* tilkobling til database-serveren utført */
- ?> 
 
-<?php
-$sql = "SELECT * FROM `klasse`;";
+    $sql = "SELECT * FROM `klasse`;";
+
+    $sqlResultat=mysqli_query($db,$sqlSetning) or die ("ikke mulig &aring; hente data fra databasen");
+    /* SQL-setning sendt til database-serveren */
+
+    if (mysqli_num_rows($sqlResultat) > 0) {
+        while ($rad = mysqli_fetch_assoc($sqlResultat)) {
+            echo "ID: " . $rad["id"] . " - Navn: " . $rad["navn"] . "<br>";
+        }
+    } else {
+        echo "Ingen resultater funnet.";
+    }
+
+    mysqli_close($db);
 ?>
