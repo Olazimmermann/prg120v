@@ -1,6 +1,6 @@
 <?php
 // --- DATABASEKOBLING ---
-$host = getenv('b-studentsql-1.usn.no'); 
+$host = getenv('b-studentsql-1.usn.no:3306'); 
 $username = getenv('olbor4025'); 
 $password = getenv('cfddolbor4025'); 
 $database = getenv('olbor4025'); 
