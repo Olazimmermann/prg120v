@@ -1,9 +1,9 @@
 <?php
 // --- DATABASEKOBLING ---
-$host = getenv('DB_HOST'); $host='mysql';
-$username = getenv('DB_USER'); $username='olbor4025';
-$password = getenv('DB_PASSWORD'); $password='cfddolbor4025';
-$database = getenv('DB_DATABASE'); $database='olbor4025';
+$host = getenv('b-studentsql-1.usn.no'); 
+$username = getenv('olbor4025'); 
+$password = getenv('cfddolbor4025'); 
+$database = getenv('olbor4025'); 
 
  $db=mysqli_connect($host,$username,$password,$database) or die ("ikke kontakt med database-server");
     /* tilkobling til database-serveren utført */
