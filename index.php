@@ -17,11 +17,8 @@ $database = getenv('DB_DATABASE');
 $klassekode=$_POST["klassekode"];
 $klassenavn=$_POST["klassenavn"];
 $studiumkode=$_POST["studiumkode"];
-if (isset($_POST["fortsett"])) {
-    echo "Klassekode: " . $klassekode . "<br />";
-    echo "Klassenavn: " . $klassenavn . "<br />";
-    echo "Studiumkode: " . $studiumkode . "<br />";
-}
-
+print("Klassekode: $klassekode <br />");
+print("Klassenavn: $klassenavn <br />");
+print("Studiumkode: $studiumkode <br />");
 
 ?>
